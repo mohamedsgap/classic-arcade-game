@@ -30,8 +30,14 @@ class BraveMan {
     this.y=0;
     this.sprite= 'images/char-boy.png';
   }
+
+  render (){
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  }
+  
 }
 
+const player= new BraveMan();
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies

@@ -24,6 +24,13 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+class BraveMan {
+  constructor(){
+    this.x=0;
+    this.y=0;
+    this.sprite= 'images/char-boy.png';
+  }
+}
 
 
 // Now instantiate your objects.

@@ -26,17 +26,19 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
  class BraveMan {
   constructor(){
-    this.x=0;
     this.distx= 101;
-    this.y=0;
+    this.startX= this.distx *2;
+    this.x= this.startX ;
     this.disty= 83;
+    this.startY= this.disty *5;
+    this.y= this.startY;
     this.sprite= 'images/char-boy.png';
   }
 
   render (){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
-
+// this function for moving the player!
   handleInput(input) {
     switch (input) {
       case 'left':

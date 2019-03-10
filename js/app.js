@@ -2,7 +2,8 @@
 var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-
+    this.x= 0;
+    this.y= 0;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -67,7 +68,9 @@ Enemy.prototype.render = function() {
 }
 
 const player= new BraveMan();
-
+const bug0= new Enemy();
+const allEnemies= [];
+allEnemies.push(bug0);
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player

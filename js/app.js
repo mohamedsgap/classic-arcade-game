@@ -47,7 +47,9 @@ Enemy.prototype.render = function() {
         }
         break;
       case 'up':
+      if (this.y > 0){
         this.y -= this.distY;
+        }
         break;
       case 'right':
       if (this.x < this.distX *4) {
@@ -55,7 +57,9 @@ Enemy.prototype.render = function() {
          }
         break;
       case 'down':
+      if(this. y < this.distY * 4) {
         this.y += this.distY;
+        }
         break;
     }
   }

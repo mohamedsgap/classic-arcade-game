@@ -26,11 +26,11 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
  class BraveMan {
   constructor(){
-    this.distx= 101;
-    this.startX= this.distx *2;
+    this.distX= 101;
+    this.startX= this.distX *2;
     this.x= this.startX ;
-    this.disty= 83;
-    this.startY= this.disty *5;
+    this.distY= 83;
+    this.startY= this.distY *5;
     this.y= this.startY;
     this.sprite= 'images/char-boy.png';
   }
@@ -42,16 +42,16 @@ Enemy.prototype.render = function() {
   handleInput(input) {
     switch (input) {
       case 'left':
-        this.x -= this.distx;
+        this.x -= this.distX;
         break;
       case 'up':
-        this.y -= this.disty;
+        this.y -= this.distY;
         break;
       case 'right':
-        this.x += this.distx;
+        this.x += this.distX;
         break;
       case 'down':
-        this.y += this.disty;
+        this.y += this.distY;
         break;
     }
   }

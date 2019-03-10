@@ -42,13 +42,17 @@ Enemy.prototype.render = function() {
   handleInput(input) {
     switch (input) {
       case 'left':
+      if (this.x >0) {
         this.x -= this.distX;
+        }
         break;
       case 'up':
         this.y -= this.distY;
         break;
       case 'right':
+      if (this.x < this.distX *4) {
         this.x += this.distX;
+         }
         break;
       case 'down':
         this.y += this.distY;

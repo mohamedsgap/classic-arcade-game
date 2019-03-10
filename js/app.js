@@ -17,8 +17,11 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     // if the enemy not pass the boundry
-    if (this.x <this.distX *4){
+    if (this.x <this.distX *5){
       this.x += 200*dt;
+    } else {
+      // rest position
+      this.x = - this.distX;
     }
 };
 

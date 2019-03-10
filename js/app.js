@@ -24,17 +24,36 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-class BraveMan {
+ class BraveMan {
   constructor(){
     this.x=0;
+    this.distx= 101;
     this.y=0;
+    this.disty= 83;
     this.sprite= 'images/char-boy.png';
   }
 
   render (){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
-  
+
+  handleInput(input) {
+    switch (input) {
+      case 'left':
+        this.x -= this.distx;
+        break;
+      case 'up':
+        this.y -= this.disty;
+        break;
+      case 'right':
+        this.x += this.distx;
+        break;
+      case 'down':
+        this.y += this.disty;
+        break;
+    }
+  }
+
 }
 
 const player= new BraveMan();

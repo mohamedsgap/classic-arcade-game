@@ -1,9 +1,10 @@
 // Enemies our player must avoid
-var Enemy = function(x,y) {
+var Enemy = function(x,y,fast) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x= x;
     this.y= y+ 55;
+    this.fast= fast;
     this.distX= 101;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -18,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     // if the enemy not pass the boundry
     if (this.x <this.distX *5){
-      this.x += 200*dt;
+      this.x += this.fast*dt;
     } else {
       // rest position
       this.x = - this.distX;
@@ -76,17 +77,21 @@ Enemy.prototype.render = function() {
 }
 
 const player= new BraveMan();
-const bug0= new Enemy(-101, 0);
-const bug1= new Enemy(-101, 83);
-const bug2= new Enemy((-101*2.5),0);
-const bug3= new Enemy((-101*2.5),83);
-const bug4= new Enemy(-101, 166);
-const bug5= new Enemy((-101*2.5),166);
-const bug6= new Enemy((-101*3.5),0);
-const bug7= new Enemy((-101*3.5),83);
-const bug8= new Enemy((-101*3.5),166);
+const bug0= new Enemy(-101, 0,200);
+const bug1= new Enemy(-101, 83,200);
+const bug2= new Enemy((-101*2.5),0,300);
+const bug3= new Enemy((-101*2.5),83,300);
+const bug4= new Enemy(-101, 166,200);
+const bug5= new Enemy((-101*2.5),166,300);
+const bug6= new Enemy((-101*3.5),0,400);
+const bug7= new Enemy((-101*3.5),83,400);
+const bug8= new Enemy((-101*3.5),166,400);
+const bug9= new Enemy(-101, 0,550);
+const bug10= new Enemy(-101, 83,750);
+const bug11= new Enemy(-101, 166,900);
+
 const allEnemies= [];
-allEnemies.push(bug0,bug1,bug2,bug3,bug4,bug5,bug6,bug7,bug8);
+allEnemies.push(bug0,bug1,bug2,bug3,bug4,bug5,bug6,bug7,bug8,bug9,bug10,bug11);
 console.log(allEnemies);
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies

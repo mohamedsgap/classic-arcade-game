@@ -56,7 +56,7 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-         if (this.win === true){
+         if (player.win === true){
            //console.log("GAME OVER");
            win.canelAnimationFrame(id);
          } else {

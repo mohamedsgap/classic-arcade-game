@@ -59,6 +59,7 @@ Enemy.prototype.render = function() {
 
     }
     if (this.y === 55){
+      console.log("WIN!");
       this.win= true;
     }
   }

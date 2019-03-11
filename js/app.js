@@ -53,10 +53,14 @@ Enemy.prototype.render = function() {
     for (let enemy of allEnemies){
 
       if (this.y === enemy.y && (enemy.x + enemy.distX/2 > this.x && enemy.x < this.x + this.distX/2) ){
-        console.log("BOOOOOOOOOOOOOOOM");
+        this.reset();
       }
 
     }
+  }
+  reset(){
+    this.x= this.startX;
+    this.y= this.startY;
   }
 // this function for moving the player!
   handleInput(input) {

@@ -40,7 +40,7 @@ Enemy.prototype.render = function() {
     this.startX= this.distX *2;
     this.x= this.startX ;
     this.distY= 83;
-    this.startY= (this.distY *5) - 25;
+    this.startY= (this.distY *4) + 55;
     this.y= this.startY;
     this.sprite= 'images/char-boy.png';
   }

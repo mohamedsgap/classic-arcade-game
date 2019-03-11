@@ -51,7 +51,11 @@ Enemy.prototype.render = function() {
   update () {
 
     for (let enemy of allEnemies){
-      console.log(enemy);
+
+      if (this.y === enemy.y && (enemy.x + enemy.distX/2 > this.x && enemy.x < this.x + this.distX/2) ){
+        console.log("BOOOOOOOOOOOOOOOM");
+      }
+
     }
   }
 // this function for moving the player!

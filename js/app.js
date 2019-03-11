@@ -43,6 +43,7 @@ Enemy.prototype.render = function() {
     this.startY= (this.distY *4) + 55;
     this.y= this.startY;
     this.sprite= 'images/char-boy.png';
+    this.win= false;
   }
 
   render (){
@@ -56,6 +57,9 @@ Enemy.prototype.render = function() {
         this.reset();
       }
 
+    }
+    if (this.y === 55){
+      this.win= true;
     }
   }
   reset(){

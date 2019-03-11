@@ -48,6 +48,12 @@ Enemy.prototype.render = function() {
   render (){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
+  update () {
+
+    for (let enemy of allEnemies){
+      console.log(enemy);
+    }
+  }
 // this function for moving the player!
   handleInput(input) {
     switch (input) {

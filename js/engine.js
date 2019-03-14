@@ -12,12 +12,30 @@
  * This engine makes the canvas' context (ctx) object globally available to make
  * writing app.js a little simpler to work with.
  */
+ /*
+  var doc = global.document,
+      win = global.window,
+      canvas = document.createElement('canvas'),
+      ctx = canvas.getContext('2d'),
+      lastTime,
+      id;
+      */
+      
+  const modal= document.querySelector('.backgroundModel');
+  const replay= document.querySelector('.replayModel');
+  replay.addEventListener('click', function(){
+    modal.classList.toggle('hide');
+    player.reset();
+    player.win= false;
+    win.requestAnimationFrame(main);
+  });
 
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas element's height/width and add it to the DOM.
      */
+
     var doc = global.document,
         win = global.window,
         canvas = doc.createElement('canvas'),
@@ -59,6 +77,7 @@ var Engine = (function(global) {
          if (player.win === true){
            //console.log("GAME OVER");
            win.canelAnimationFrame(id);
+           modal.classList.toggle('hide');
          } else {
                 id= win.requestAnimationFrame(main);
       }

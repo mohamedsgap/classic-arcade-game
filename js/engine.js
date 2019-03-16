@@ -23,13 +23,16 @@
 
   const modal= document.querySelector('.backgroundModel');
   const replay= document.querySelector('.replayModel');
+/*
   replay.addEventListener('click', function(){
     modal.classList.toggle('hide');
-    player.reset();
-    player.win= false;
     win.requestAnimationFrame(main);
-  });
+    player.win= false;
+    player.reset();
 
+
+  });
+*/
 var Engine = (function(global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
@@ -82,6 +85,16 @@ var Engine = (function(global) {
                 id= win.requestAnimationFrame(main);
       }
     }
+
+// event listener for replay button on modal
+    replay.addEventListener('click', function(){
+      modal.classList.toggle('hide');
+      win.requestAnimationFrame(main);
+      player.win= false;
+      player.reset();
+
+
+    });
 
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the

@@ -1,6 +1,29 @@
 body {
     text-align: center;
+    /*background: linear-gradient(160deg, #yellow 0%, #red 100%);*/
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
 }
+
+
+.footer {
+
+  position: absolute;
+  bottom:0;
+  border-top: 1px solid #dbe2e8;
+  margin-top: 1em;
+  padding: 1em;
+  text-align: center;
+  color: #428cf4;
+  font-size: 19px;
+
+}
+h4 {
+  color: white;
+}
+
+
+/* start styling the modal */
 .backgroundModel{
   position: absolute;
   top: 0;
@@ -55,18 +78,4 @@ body {
   display: none;
 }
 
-.footer {
-
-  position: absolute;
-  bottom:0;
-  border-top: 1px solid #dbe2e8;
-  margin-top: 1em;
-  padding: 1em;
-  text-align: center;
-  color: #428cf4;
-  font-size: 19px;
-
-}
-h4 {
-  color: white;
-}
+/* finish styling the modal */

@@ -20,7 +20,7 @@
       lastTime,
       id;
       */
-      
+
   const modal= document.querySelector('.backgroundModel');
   const replay= document.querySelector('.replayModel');
   replay.addEventListener('click', function(){
@@ -76,7 +76,7 @@ var Engine = (function(global) {
          */
          if (player.win === true){
            //console.log("GAME OVER");
-           win.canelAnimationFrame(id);
+           win.cancelAnimationFrame(id);
            modal.classList.toggle('hide');
          } else {
                 id= win.requestAnimationFrame(main);

@@ -31,18 +31,18 @@ body {
 }
 
 
-.footer {
 
-  position: absolute;
-  bottom:0;
-  border-top: 1px solid #dbe2e8;
-  margin-top: 1em;
-  padding: 1em;
-  text-align: center;
-  color: #428cf4;
-  font-size: 19px;
+
+  footer {
+    border-top: 1px solid #dbe2e8;
+    margin-top: 1em;
+    padding: 1em;
+    text-align: center;
+    color: #428cf4;
+    font-size: 19px;
 
 }
+
 h4 {
   color: white;
 }

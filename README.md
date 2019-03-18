@@ -1,5 +1,5 @@
 # Classic-Arcade-Game-Frogger
-Arcade Game Frogger
+Arcade Game Frogger (Dare!  to finish the game)
 
 ## Project Summary
 This is a basic "Frogger" style game where the goal is to reach a certain destination while avoding a fleet of enemies that cross the screen.

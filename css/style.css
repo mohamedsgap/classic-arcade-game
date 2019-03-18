@@ -24,19 +24,13 @@ body {
     background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
 }
 
+h1 {
+  margin-top: 30rm;
+  color: chocolate;
+}
 
-
-
-  footer {
-    /*
-    border-top: 1px solid #dbe2e8;
-    margin-top: 1em;
-    padding: 1em;
-    */
-    text-align: center;
+  h6 {
     color: #428cf4;
-    font-size: 19px;
-
 }
 
 h4 {
